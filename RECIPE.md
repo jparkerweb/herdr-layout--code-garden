@@ -111,8 +111,9 @@ The other ten (monstera, Boston fern, aloe, lavender, rose, bonsai, Venus flytra
 - `mods/garden-spaces`: a clone of the shipped `spaces` with the git tail moved to a second line. Like the shipped mod, it **runs `git`** (read-only `rev-parse`, `symbolic-ref`, `rev-list`) in each space's folder, and **`hc machine ls`**.
 - `mods/garden-chrome`: the brand header and footer, cloned from `workspace-chrome`.
   - `scenes.js` holds the sprites (`S`) and scenes (`SCENES`). It exports `drawScene(scene, phase, width, play)` and `sceneLength`. Phases go start → go (after 120 ms) → out (after the scene's length) → gone.
-  - Also has the sky (`SKIES`, `skyLayer`) and the grass (`GRASS`).
+  - `sky.js` holds the sky (`SKIES`, `skyNow`, `skyLayer`) and the grass strip (`GRASS`, `grass`).
 - `mods/garden-status`: the status bar, rewritten from `workspace-status`.
+- `tools/preview/` (not part of the layout): `build_preview.py` stages two mods, `garden-showcase` (a staged window with made-up projects) and `garden-poster` (sky, title, the cast at 3×). It screenshots them with `herdr-app shot` and composes `preview.png`.
 - `mods/garden-gallery`: optional, not in the layout. `herdr-app do mod.open --name garden-gallery` shows every plant in every mood and growth stage.
 - Icons: `mods/workspace-chrome/*.svg` (shipped with Herdr), plus `settings`, `plus`, `search` and `sidebar` in `garden-chrome` and the pane buttons in `garden-pane`.
 - Nothing reaches the network. Nothing reads files outside Herdr's home.

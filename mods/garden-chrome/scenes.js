@@ -273,7 +273,7 @@ export function drawScene(scene, phase, width, play, preview = false) {
     const id = `scene-${play}-${i}`;
     if (actor.go && preview) {
       // A still: crossing actors spread out by their delays, mid-strip.
-      const x = Math.max(0, width * 0.55 - w - (actor.delay ?? 0) * 14);
+      const x = Math.max(0, width * 0.55 - w - (actor.delay ?? 0) * 7 * U);
       return div().absolute().left(x).top(top).w(w).h(h).child(inner);
     }
     if (actor.go) {

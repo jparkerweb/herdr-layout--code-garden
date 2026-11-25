@@ -54,9 +54,20 @@ Your own layout stays as it was. `Ctrl+Shift+L` switches between layouts.
 ## Make it yours
 
 - **See every plant in every mood:** `herdr-app do mod.open --name garden-gallery`
-- **Draw or add plants:** each plant is an ASCII pixel map in `mods/garden-agents/plant.js` (`SPECIES`). `plant.js` is copied into `garden-pane`, `garden-chrome` and `garden-gallery` too, because Herdr mods can't share files. Copy it to all four after editing.
+- **Draw or add plants:** each plant is an ASCII pixel map in `mods/garden-agents/plant.js` (`SPECIES`).
 - **Add scenes:** `mods/garden-chrome/scenes.js`. Sprites are in `S` and scenes in `SCENES`; a new scene is one line.
+- **Change the sky or grass:** `mods/garden-chrome/sky.js`.
 - **Colours:** `themes/code-garden.json`.
+
+## Developing
+
+Edit your installed copy in `~/.config/herdr-app` and Herdr reloads it as you save. When you're happy, copy it back into this repo and commit:
+
+```sh
+./sync.sh             # or .\sync.ps1 on Windows
+```
+
+`sync` also copies `plant.js` from `garden-agents` into the other three mods that use it (Herdr mods can't share files), and checks every mod. To rebuild `preview.png`, run `python tools/preview/build_preview.py`. [AGENTS.md](AGENTS.md) has the full workflow and the rules for keeping `RECIPE.md` accurate, for you or your coding agent.
 
 ## Uninstall
 
