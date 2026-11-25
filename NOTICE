@@ -1,0 +1,16 @@
+Code Garden — a layout for Herdr
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This project includes modified copies of mods shipped with Herdr (https://herdr.dev),
+also licensed under the Apache License, Version 2.0:
+
+  mods/garden-agents/main.js   derived from Herdr's `agents` mod
+  mods/garden-pane/main.js     derived from Herdr's `pane` mod
+  mods/garden-spaces/main.js   derived from Herdr's `spaces` mod
+  mods/garden-chrome/main.js   derived from Herdr's `workspace-chrome` mod
+  mods/garden-status/main.js   derived from Herdr's `workspace-status` mod
+  layouts/code-garden.json     derived from Herdr's `main` layout
+
+Each derived file says so in its first line and has been modified for this layout.
+The SVG icons in mods/garden-chrome and mods/garden-pane are copied unchanged from
+Herdr's shipped mods. Herdr's own `mods/workspace-chrome` icons are referenced, not copied.
